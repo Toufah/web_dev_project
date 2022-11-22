@@ -1,0 +1,24 @@
+In this file your gonna find a guide to help you use the frame work easly
+
+global classes for header: this classes gives the global shape of the header
+    -->topHeader
+    -->middleHeader
+    -->bottomHeader
+
+classes to remove preset style:
+    -->li_norm : remove style from list
+    -->a_norm : remove color and underline from a
+    -->sel : set cursor to pointer
+        =>sel:focus : use this to remove outline from input while focus
+    -->back_remo : to remove background
+    -->bor_remo : to remove border
+
+classes related to text:
+    -->ft_w_500 : set font weigth to 500
+    -->ft_w_600 : set font weigth to 600
+    -->ft_si_14 : set font size to 14px
+    -->ft_si_20 : set font size to 20px
+    -->cap : cappitalize text
+    -->upper : uppercase text
+    -->no_wrap : no wrap for text( prevent text from going back to line )
+    -->logo : to create the logo

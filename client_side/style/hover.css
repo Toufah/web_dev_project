@@ -1,0 +1,6 @@
+.ch_to_gold{
+    transition: 0.2s;
+}
+.ch_to_gold:hover{
+    color: goldenrod;
+}

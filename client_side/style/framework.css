@@ -1,0 +1,110 @@
+/* give this classes to any element to apply style */
+.flex_sp_bet{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.topHeader{
+    padding: 5px 60px;
+    background-color: #ececec;
+}
+.inl_bl{
+    display: inline-block;
+    padding: 0 10px;
+    border-right: solid 1px #ccc;
+    overflow: hidden;
+}
+/* start - to remove default styles */
+.bor_remo{
+    border: none;
+}
+.back_remo{
+    background-color: unset;
+}
+.sel{
+    cursor: pointer;
+}
+.sel:focus{
+    border: none;
+    outline: none;
+}
+.a_norm{
+    text-decoration: none;
+    color: unset;
+}
+.li_norm{
+    list-style-type: none;
+}
+/* end - to remove default styles */
+.wi_100{
+    width: 100px;
+}
+.no_wrap{
+    white-space: nowrap;
+}
+.ft_si_14{
+    font-size: 14px;
+}
+.upper{
+    text-transform: uppercase;
+}
+.cap{
+    text-transform: capitalize;
+}
+.middleHeader {
+    padding: 5px 60px;
+    background-color: unset;
+}
+.logo{
+    font-weight: 700;
+    font-size: 40px;
+    padding: 10px 0;
+}
+.col_gold{
+    color: goldenrod;
+}
+.sear_in{
+    width: 400px;
+    height: 30px;
+    border: solid goldenrod 2px;
+    border-radius: 5px 0 0 5px;
+    padding: 5px 10px;
+}
+.sear_in:focus{
+    outline: none;
+}
+.sea_icon{
+    background-color: goldenrod;
+    text-align: center;
+    padding: 8.5px;
+    border-radius: 0 5px 5px 0;
+    position: absolute;
+    right: -7px;
+    top: 0;
+}
+.ft_si_20{
+    font-size: 20px;
+}
+.ft_w_600{
+    font-weight: 600;
+}
+.ft_w_500{
+    font-weight: 500;
+}
+.mar_side_10{
+    margin: 0 10px;
+}
+.bottomHeader{
+    padding: 10px 60px;
+    background-color: goldenrod;
+    color: rgb(49, 49, 49);
+}
+.centerX{
+    margin: 0 auto;
+}
+.fit_cont{
+    width: fit-content;
+}
+.centerY_li{
+    margin-top: 3.39px;
+}

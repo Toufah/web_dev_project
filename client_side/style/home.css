@@ -1,0 +1,11 @@
+/* font family : Sono 300 400 500 600 700 */
+@import url('https://fonts.googleapis.com/css2?family=sonowght@300;400;500;600;700&display=swap');
+/* start global style */
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Sono', sans-serif;
+    text-transform: capitalize;
+}
+/* end global style */

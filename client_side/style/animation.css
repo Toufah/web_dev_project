@@ -1,0 +1,12 @@
+/* this file is only for animations */
+.walk{
+    animation: walk 5s linear infinite;
+}
+@keyframes walk{
+    0%{
+        transform: translateX(90px);
+    }
+    100%{
+        transform: translateX(-185px);
+    }
+}
