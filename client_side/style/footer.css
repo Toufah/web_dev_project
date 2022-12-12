@@ -1,0 +1,76 @@
+
+footer {
+    background-color: #1f2122;
+    position: relative;
+}
+footer .content {
+    color: #fff;
+    padding: 30px 20px;
+    align-items: flex-start;
+}
+footer .content div span{
+    color: goldenrod;
+}
+footer .content .sec1{
+    text-align: center;
+}
+footer .content .sec1 h1{
+    font-size: 40px;
+}
+footer .content .sec2{
+    padding: 25px 0;
+}footer .content .sec2 p{
+    margin-bottom: 20px;
+}
+footer .content .sec3 p:first-child{
+    font-size: 18px;
+    font-weight: 500;
+    margin-bottom: 25px;
+    position: relative;
+}
+footer .content .sec3 p:first-child::after{
+    content: '';
+    position: absolute;
+    width: 50%;
+    height: 3px;
+    bottom: -7px;
+    left: 0;
+    background-color: goldenrod;
+}
+footer .content .sec3 p:not(:first-child){
+    margin-bottom: 20px;
+}
+footer .copyrighting{
+    padding: 20px 0;
+    text-align: center;
+    color: #fff;
+}
+footer span{
+    color: goldenrod;
+}
+footer::before{
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 3px;
+    top: 0;
+    left: 0;
+    background-color: goldenrod;
+}
+/* start footer media */
+@media (max-width: 950px){
+    footer .content{
+        display: block !important;
+        text-align: center;
+    }
+    footer .content .sec3 p:first-child{
+        width: fit-content;
+        margin: 0 auto 25px auto;
+    }
+    footer .content .sec3 p:first-child::after{
+        left: 50%;
+        transform: translateX(-50%);
+        width: 80%;
+    }
+}
+/* end footer media */

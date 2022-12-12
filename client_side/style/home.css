@@ -1,11 +1,220 @@
 /* font family : Sono 300 400 500 600 700 */
 @import url('https://fonts.googleapis.com/css2?family=sonowght@300;400;500;600;700&display=swap');
 /* start global style */
+:root{
+    --var-gray: #ececec;
+    --var-gray-2 : #ccc;
+    --var-main-color : #daa520;
+}
 *{
     padding: 0;
     margin: 0;
     box-sizing: border-box;
     font-family: 'Sono', sans-serif;
     text-transform: capitalize;
+    scroll-behavior: smooth;
+}
+.container{
+    margin: 0 auto;
+    padding: 0 60px;
 }
 /* end global style */
+/* start welcoming */
+#welcoming .content .text{
+    width: 40%;
+}
+#welcoming .content h1{
+    font-weight: 900;
+    font-size: 40px;
+    position: relative;
+    width: fit-content;
+}
+#welcoming .content h1::after{
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 3px;
+    bottom: -7px;
+    left: 0;
+    background-color: goldenrod;
+}
+#welcoming .content p{
+    width: 90%;
+    line-height: 1.3;
+    text-transform: none;
+    font-size: 1.2rem;
+    margin: 10px 0;
+}
+#welcoming .content p::first-letter{
+    text-transform: capitalize;
+    font-size: 40px;
+    color: var(--var-main-color);
+}
+#welcoming .content button{
+    margin-top: 10px;
+}
+#welcoming .content img{
+    width: 40%;
+}
+/* end welcoming */
+/* start features */
+#features .content{
+    text-align: center;
+    margin: 15px 0;
+}
+#features .content .comp{
+    width: 220px;
+    border: solid 1px #cce7d0;
+    border-radius: 20px;
+    text-align: center;
+    padding: 25px 15px;
+    box-shadow: 0 0 8px #00000032;
+    transition: 0.4s all;
+}
+#features .content img{
+    width: 80%;
+    margin: 5px 0;
+}
+#features .content p{
+    margin: 10px;
+    background-color: var(--var-main-color);
+    color: #fff;
+    padding: 10px 15px;
+    width: fit-content;
+    border-radius: 5px;
+    margin: 0 auto;
+    box-shadow: 0 0 8px #00000032;
+}
+/* end features */
+/* start featured products */
+#featured_prod .content h1{
+    font-size: 40px;
+    width: fit-content;
+    margin: 35px auto 45px auto;
+    position: relative;
+}
+#featured_prod .content h1::after{
+    content: '';
+    position: absolute;
+    background-color: #00000050;
+    width: 110%;
+    height: 1px;
+    left: 50%;
+    bottom: -15px;
+    transform: translateX(-50%);
+}
+#featured_prod .items_cont{
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    flex-wrap: wrap;
+}
+#featured_prod .item{
+    width: 20%;
+    min-width: 300px;
+    padding: 15px 10px;
+    border-radius: 20px;
+    box-shadow: 0 0 8px #00000032;
+    position: relative;
+    margin: 15px 10px;
+    transition: 0.4s all;
+}
+#featured_prod .item img{
+    width: 100%;
+    border-radius: 20px;
+}
+#featured_prod  .des span:not(.col_gold){
+    color: #00000072;
+}
+#featured_prod .des h4{
+    padding: 2px 0;
+}
+#featured_prod .des i{
+    color: var(--var-main-color);
+}
+#featured_prod .des h3{
+    padding: 2px 0;
+    font-size: 20px;
+}
+#featured_prod i:not(.des i){
+    padding: 10px;
+    background-color: var(--var-gray);
+    border-radius: 50%;
+    position: absolute;
+    right: 10px;
+    bottom: 10px;
+}
+/* end featured products */
+/* start call to action */
+#call{
+    background-image: url(../pictures/yellow-notebook-paper-texture.jpg);
+    height: 200px;
+    margin: 20px 0;
+    text-align: center;
+    position: relative;
+    box-shadow: 0 0 8px 0 #00000050;
+}
+#call .content{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+#call .content h2{
+    font-size: 30px;
+    margin-bottom: 15px;
+}
+/* end call to action */
+/* start newsletter */
+#newsletter{
+    background-color: #1f2122;
+    height: 100px;
+    color: #fff;
+    box-shadow: 0 -3px 8px 0 #00000050;
+}
+#newsletter .container{
+    height: 100%;
+    padding: 0;
+}
+#newsletter .newstext h4{
+    font-size: 22px;
+    font-weight: 700;
+    color: #fff;
+    margin-bottom: 10px;
+}
+#newsletter .newstext p{
+    font-size: 14px;
+    font-weight: 600;
+    color: #818EA0;
+}
+#newsletter form{
+    width: 50%;
+    position: relative;
+    text-align: left;
+}
+#newsletter input{
+    height: 40px;
+    padding: 0 1.25em;
+    font-size: 14px;
+    width: 80%;
+    border: solid 1px transparent;
+    border-radius: 4px 0 0 4px;
+    outline: none;
+    text-transform: none;
+} 
+#newsletter button{
+    background-color: var(--var-main-color);
+    color: #fff;
+    height: 3.125rem;
+    width: 20%;
+    height: 40px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    border: none;
+    border-radius: 0 4px 4px 0;
+    cursor: pointer;
+    font-size: 14px;
+    text-transform: capitalize;
+}
+/* end newsletter */

@@ -1,0 +1,147 @@
+/* start global style */
+@import url("https://fonts.googleapis.com/css2?family=sonowght@300;400;500;600;700&display=swap");
+* {
+  text-transform: capitalize;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Sono", sans-serif;
+}
+:root {
+  --main-color: #05466c;
+  --lighter-var: #c6cee0;
+  --lighter-var-2: #a4aec7;
+}
+body {
+  position: relative;
+}
+/* end global style */
+#products {
+  padding: 20px 15px;
+}
+#products .content .addProduct {
+  box-shadow: 0 0 10px 0 #00000050;
+  padding: 20px 15px;
+  border-radius: 5px;
+  transition: 0.4s all;
+}
+#products .content .addProduct:hover {
+  box-shadow: 5px 5px 15px 0 #00000050;
+}
+#products .content .addProduct h1 {
+  color: var(--main-color);
+  font-size: 1.5rem;
+  padding: 10px 0;
+}
+#products .content .addProduct form {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 15px;
+  margin-top: 10px;
+  position: relative;
+}
+#products .content .addProduct form label {
+  display: block;
+  font-size: 1.1rem;
+  font-weight: 500;
+  color: var(--main-color);
+  margin-bottom: 5px;
+}
+#products .content .addProduct form div > input[type="text"],
+#products .content .addProduct form div > input[type="number"],
+#products .content .addProduct form input:not(:last-child),
+#products .content .addProduct textarea {
+  border: none;
+  outline: none;
+  box-shadow: 0 0 4px 0 #00000050;
+  width: 80%;
+  resize: none;
+  height: 40px;
+  border-radius: 5px;
+  margin-top: 5px;
+  padding: 5px 15px;
+  line-height: 1.5;
+}
+#products .content .addProduct form div {
+  position: relative;
+  min-height: 80px;
+}
+#products .content .addProduct form div input[type="file"] {
+  display: none;
+}
+#products .content .addProduct form div label:nth-child(2) {
+  position: absolute;
+  background-color: var(--main-color);
+  color: #fff;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  top: 45%;
+  cursor: pointer;
+  box-shadow: 0 0 4px 0 #00000050;
+}
+#products .content .addProduct form div:last-child input {
+  position: absolute;
+  bottom: 0;
+  right: 20%;
+}
+#products .content .addProduct form div input::-webkit-inner-spin-button {
+  display: none;
+}
+/* start media */
+@media (max-width: 830px) {
+  #products .content .addProduct form {
+    grid-template-columns: 1fr;
+  }
+  #products .content .addProduct form div > input[type="text"],
+  #products .content .addProduct form div > input[type="number"],
+  #products .content .addProduct form input:not(:last-child),
+  #products .content .addProduct textarea {
+    width: 100%;
+  }
+}
+/* end media */
+.container {
+  padding: 20px 15px;
+  box-shadow: 0 0 10px 0 #00000050;
+  transition: 0.4s all;
+  border-radius: 5px;
+}
+.container:hover {
+  box-shadow: 4px 4px 15px 0 #00000050;
+}
+.container table {
+  margin-top: 15px;
+  width: 100%;
+  border-collapse: collapse;
+  border-radius: 5px;
+}
+.container table thead {
+  font-weight: 600;
+}
+.container table td {
+  padding: 15px;
+}
+.desc{
+  max-width: 250px;
+  overflow: scroll;
+  display: inline-block;
+  white-space: wrap;
+}
+.desc::-webkit-scrollbar{
+  display: none;
+}
+.container table tr {
+  color: var(--main-color);
+  border-bottom: 1px solid var(--lighter-var);
+  transition: 0.3s;
+}
+.container table tbody td {
+  text-transform: none;
+}
+.container table tr:hover {
+  background-color: var(--lighter-var);
+}

@@ -1,0 +1,163 @@
+/* start global style */
+@import url('https://fonts.googleapis.com/css2?family=sonowght@300;400;500;600;700&display=swap');
+*{
+    text-transform: capitalize;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Sono', sans-serif;
+}
+:root{
+    --main-color : #05466c;
+    --lighter-var : #c6cee0;
+    --lighter-var-2 : #a4aec7;
+}
+/* end global style */
+/* start gloabal data */
+#global_data{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 15px;
+    padding: 20px 15px;
+}
+#global_data .data{
+    min-height: 150px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px 0 #00000050;
+    transition: 0.4s all;
+    padding: 0 10%;
+}
+#global_data .data:hover,
+#charts > div:hover,
+#recent_ord .content:hover{
+    box-shadow: 5px 5px 15px 0 #00000050;
+}
+#global_data .data .icon{
+    font-size: 19px;
+    color: var(--lighter-var);
+    background-color: var(--main-color);
+    text-align: center;
+    padding: 15px;
+    min-width: 50px;
+    min-height: 50px;
+    border-radius: 50%;
+    box-shadow: 2px 2px 10px 0 #00000050;
+}
+#global_data .data .text{
+    text-align: right;
+}
+#global_data .data .text h5{
+    margin-bottom: 10px;
+    color: var(--lighter-var-2);
+}
+#global_data .data .text span{
+    font-size: 25px;
+    font-weight: 500;
+    color: var(--main-color);
+}
+/* end global data*/
+/* start charts */
+#charts{
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 15px;
+    padding: 10px 15px;
+}
+#charts > div{
+    padding: 15px 20px;
+    box-shadow: 0 0 10px 0 #00000050;
+    border-radius: 5px;
+    transition: 0.4s all;
+}
+#charts > div canvas{
+    width: 90% !important;
+    margin: 0 auto 10px auto;
+}
+#charts > div h4{
+    color: var(--main-color);
+    margin-bottom: 5px;
+}
+#charts > div p span{
+    color: rgb(0, 200, 0);
+    font-weight: 500;
+}
+#charts > div p {
+    color: var(--lighter-var-2);
+    font-size: 14px;
+}
+/* end charts */
+/* start recent customors */
+#charts > div .user h1{
+    color: var(--main-color);
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+#charts > div .user ul li{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 15px;
+    padding: 5px 0 5px 10px;
+    border-radius: 5px;
+    transition: 0.2s all;
+    margin-bottom: 5px;
+}
+#charts > div .user ul li:hover{
+    box-shadow: 0 0 10px 0 #00000050;
+}
+#charts > div .user ul li img{
+    width: 50px;
+    border-radius: 50%;
+}
+#charts > div .user ul li .text h3{
+    color: var(--main-color);
+}
+#charts > div .user ul li .text p{
+    font-size: 12px;
+}
+/* end recent customors */
+/* start recent orders */
+#recent_ord{
+    padding: 20px 15px 0 15px;
+}
+#recent_ord .content{
+    width: 100%;
+    box-shadow: 0 0 10px 0 #00000050;
+    border-radius: 5px;
+    transition: 0.4s all;
+    padding: 20px 15px;
+}
+#recent_ord .text h1{
+    color: var(--main-color);
+    font-size: 1.5rem;
+    padding: 10px 0;
+}
+#recent_ord table{
+    margin-top: 15px;
+    width: 100%;
+    border-collapse: collapse;
+    border-radius: 5px;
+}
+#recent_ord table thead{
+    font-weight: 600;
+    border-radius: 5px;
+}
+#recent_ord table tr{
+    color: var(--main-color);
+    border-bottom: 1px solid var(--lighter-var);
+    transition: 0.3s;
+}
+#recent_ord table tr:hover{
+    background-color: var(--lighter-var);
+}
+#recent_ord table td{
+    padding: 15px;
+    text-align: center;
+}
+#recent_ord table td:first-child{
+    text-align: left;
+} 
+#recent_ord table td:last-child{
+    text-align: right;
+}
+/* end recent orders */

@@ -1,0 +1,96 @@
+/* start global style */
+@import url('https://fonts.googleapis.com/css2?family=sonowght@300;400;500;600;700&display=swap');
+*{
+    text-transform: capitalize;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Sono', sans-serif;
+}
+:root{
+    --main-color : #05466c;
+    --lighter-var : #c6cee0;
+    --lighter-var-2 : #a4aec7;
+}
+/* end global style */
+/*start section*/
+section{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+.container{
+    width: 60%;
+    overflow: hidden;
+    box-shadow: 0 0 10px 0 #00000050;
+    border-radius: 5px;
+    transition: 0.4s all;
+}
+.container:hover{
+    box-shadow: 4px 4px 15px 0 #00000050;
+}
+.container h1{
+    text-align: center;
+    background-color: var(--lighter-var);
+    color: var(--main-color);
+    padding: 15px 20px;
+}
+.container form{
+    padding: 15px 20px;
+}
+.container form div{
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+    margin: 20px 0;
+}
+.container form div input{
+    height: 40px;
+    padding: 5px 0 5px 15px;
+    outline: none;
+    border: none;
+    box-shadow: 0 0 4px 0 #00000050;
+    margin-top: 5px;
+    color: var(--main-color);
+    font-weight: 500;
+    transition: 0.4s all;
+    border-radius: 5px;
+}
+input::-webkit-inner-spin-button{
+    display: none;
+}
+.container form div input:hover,
+.container form div input:focus{
+    box-shadow: 2px 2px 8px 0 #00000050;
+}
+.container form div label{
+    font-weight: 500;
+    color: var(--main-color);
+    font-size: 1.1rem;
+}
+.container form .btn_s{
+    width: 6rem;
+    height: 40px;
+    border-radius: 5px;
+    font-weight: 600;
+    font-size: 1.05rem;
+    color: var(--main-color);
+    background-color: var(--lighter-var);
+    border: none;
+    box-shadow: 0 0 4px 0 #00000050;
+    cursor: pointer;
+    transition: 0.4s all;
+}
+.container form .btn_s:hover{
+    background-color: var(--main-color);
+    color: #fff;
+}
+/*end section*/
+/* start media */
+@media (max-width: 830px){
+    .container{
+        width: 90%;
+    }
+}
+/* end media */

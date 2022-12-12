@@ -1,7 +1,18 @@
+@import url(home.css);
 /* give this classes to any element to apply style */
 .flex_sp_bet{
     display: flex;
     justify-content: space-between;
+    align-items: center;
+}
+.flex_sp_ev{
+    display: flex;
+    justify-content: space-evenly !important;
+    align-items: center;
+}
+.flex_sp_arr{
+    display: flex;
+    justify-content: space-around;
     align-items: center;
 }
 .topHeader{
@@ -53,20 +64,21 @@
 }
 .middleHeader {
     padding: 5px 60px;
-    background-color: unset;
+    background-color: #fff;
 }
 .logo{
     font-weight: 700;
     font-size: 40px;
     padding: 10px 0;
+    text-shadow: 0 0 2px #00000050;
 }
 .col_gold{
-    color: goldenrod;
+    color: var(--var-main-color);
 }
 .sear_in{
     width: 400px;
     height: 30px;
-    border: solid goldenrod 2px;
+    border: solid var(--var-main-color) 2px;
     border-radius: 5px 0 0 5px;
     padding: 5px 10px;
 }
@@ -74,13 +86,14 @@
     outline: none;
 }
 .sea_icon{
-    background-color: goldenrod;
+    background-color: var(--var-main-color);
     text-align: center;
     padding: 8.5px;
     border-radius: 0 5px 5px 0;
     position: absolute;
     right: -7px;
     top: 0;
+    cursor: pointer;
 }
 .ft_si_20{
     font-size: 20px;
@@ -96,7 +109,7 @@
 }
 .bottomHeader{
     padding: 10px 60px;
-    background-color: goldenrod;
+    background-color: var(--var-main-color);
     color: rgb(49, 49, 49);
 }
 .centerX{
@@ -107,4 +120,49 @@
 }
 .centerY_li{
     margin-top: 3.39px;
+}
+.switch{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: rgba(218, 165, 32, 0.4);
+    top: calc(50% - 37.5px);
+    left: 2%;
+    box-shadow: 0 0 8px 0 rgba(0, 0, 0, 0.5);
+    transform: translateY(-50%);
+    cursor: pointer;
+    outline: var(--var-main-color) solid 1px;
+    -webkit-backdrop-filter: blur(3.1px);
+    backdrop-filter: blur(1.5px);
+}
+.switch::before{
+    content: '';
+    position: absolute;
+    border: solid 5px;
+    border-color: #fff transparent transparent #fff;
+    width: 10px;
+    height: 10px;
+    transform: rotate(-45deg);
+    top: 50%;
+    left: 50%;
+    margin-top: -10.14px;
+    margin-left: -8.14px;
+    cursor: pointer;;
+}
+.switch_right{
+    right: 2%;
+    left: unset;
+    transform: rotate(180deg);
+}
+.btn{
+    background-color: var(--var-main-color);
+    border: none;
+    border-radius: 5px;
+    width: 40%;
+    height: 50px;
+    font-size: 18px;
+    font-weight: 450;
+    color: #fff;
+    box-shadow: 5px 5px 20px 0 #00000062;
+    cursor: pointer;
 }
