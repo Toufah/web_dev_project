@@ -1,0 +1,125 @@
+/* start global style */
+@import url('https://fonts.googleapis.com/css2?family=sonowght@300;400;500;600;700&display=swap');
+*{
+    text-transform: capitalize;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Sono', sans-serif;
+}
+:root{
+    --main-color : #05466c;
+    --lighter-var : #c6cee0;
+    --lighter-var-2 : #a4aec7;
+}
+/* end global style */
+.content{
+    padding: 20px 15px 0 15px;
+}
+.content .table{
+    box-shadow: 0 0 10px 0 #00000050;
+    border-radius: 5px;
+    transition: 0.4s all;
+    padding: 20px 15px;
+    background-color: #fff;
+}
+.content table{
+    width: 100%;
+    border-collapse: collapse;
+    border-radius: 5px;
+}
+.content table thead{
+    font-weight: 600;
+    border-radius: 5px;
+}
+.content table tr{
+    color: var(--main-color);
+    border-bottom: 1px solid var(--lighter-var);
+    transition: 0.3s;
+}
+.content table tr:hover{
+    background-color: var(--lighter-var);
+}
+.content table td{
+    padding: 15px;
+    text-align: center;
+    position: relative;
+    position: relative;
+}
+.content table td:first-child{
+    text-align: left;
+}
+.content table td:last-child{
+    text-align: right;
+}
+.content table tbody tr td span{
+    position: relative;
+}
+.content table tbody tr td:nth-child(2) i{
+    margin-left: 5px;
+    cursor: pointer;
+}
+.content table tbody tr td form select{
+    outline: none;
+    background-color: #fff;
+    padding: 2px;
+    border: none;
+    border-radius: 5px;
+    box-shadow: 2px 2px 4px 0 #00000050;
+    cursor: pointer;
+}
+.content table tbody tr td form button{
+    border: none;
+    outline: none;
+    border-radius: 5px;
+    background-color: transparent;
+    cursor: pointer;
+    color: inherit;
+    padding: 2px;
+}
+/*
+.hoverProduct{
+    max-width: 300px;
+    max-height: 400px;
+    overflow: hidden;
+    box-shadow: 4px 4px 10px 0 #00000050;
+    border-radius: 5px;
+    background-color: #fff;
+    position: absolute;
+    top: 10px;
+    left: 50%;
+    margin-left: -150px;
+    z-index: 1000;
+    transition: all 0.4s;
+    height: 0;
+    padding: 0;
+}
+td:hover > .hoverProduct{
+    padding: 25px 5px 20px 5px;
+    height: auto;
+}
+.hoverProduct:hover > .img,
+.img:hover > img{
+    height: auto;
+}
+.hoverProduct i{
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    color: inherit;
+}
+.hoverProduct .img{
+    width: 100%;
+    overflow: hidden;
+    border-radius: 5px;
+    margin-bottom: 5px;
+    transition: 0.4s all;
+    height: 0;
+}
+.hoverProduct .img img{
+    width: 100%;
+}
+.hoverProduct h6{
+    font-size: 0.8rem;
+    color: green;
+} */

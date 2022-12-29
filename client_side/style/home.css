@@ -61,9 +61,11 @@
 #features .content{
     text-align: center;
     margin: 15px 0;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 40px;
 }
 #features .content .comp{
-    width: 220px;
     border: solid 1px #cce7d0;
     border-radius: 20px;
     text-align: center;

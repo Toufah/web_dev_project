@@ -1,0 +1,222 @@
+/* font family : Sono 300 400 500 600 700 */
+@import url("https://fonts.googleapis.com/css2?family=sonowght@300;400;500;600;700&display=swap");
+/* start global style */
+:root {
+  --var-gray: #ececec;
+  --var-gray-2: #ccc;
+  --var-main-color: #daa520;
+}
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Sono", sans-serif;
+  text-transform: capitalize;
+  scroll-behavior: smooth;
+}
+.container {
+  margin: 0 auto;
+  padding: 0 60px;
+}
+/* end global style */
+section {
+  padding: 15px 0;
+}
+.container .content {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 20px;
+  overflow: hidden;
+}
+.content .products h1 {
+  background-color: var(--var-gray-2);
+  padding: 15px 0 15px 20px;
+  border-radius: 5px;
+  color: #262626;
+}
+.content .products h1 span {
+  color: var(--var-main-color);
+}
+.content .products .element {
+  padding: 15px 0 15px 15px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  border-radius: 5px;
+  overflow: hidden;
+}
+.content .products .element .img {
+  border-radius: 5px;
+  overflow: hidden;
+  display: flex;
+  min-width: 240px;
+  align-items: center;
+  justify-items: center;
+  box-shadow: 0 0 10px 0 #00000050;
+}
+.content .products .element > div:nth-child(2) {
+  padding: 15px 20px 15px 20px;
+  width: 100%;
+}
+.content .products .element > div > div:first-child {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+.content .products .element > div > div:first-child h3 {
+  color: var(--var-main-color);
+}
+.content .products .element > div > div:first-child span {
+  font-weight: 500;
+  font-size: 1.2rem;
+}
+.content .products .element > div > p {
+  font-weight: 500;
+  line-height: 1.6;
+  margin-bottom: 10px;
+}
+.content .products .element > div > span {
+  margin-bottom: 10px;
+  display: block;
+}
+.content .products .element form input[type="number"] {
+  width: 70px;
+  height: 30px;
+  outline: none;
+  border: solid 1px var(--var-main-color);
+  border-radius: 5px;
+  display: block;
+  padding-left: 5px;
+  color: #262626;
+  font-weight: 500;
+  margin-bottom: 10px;
+}
+input::-webkit-inner-spin-button {
+  display: none;
+}
+.content .products .element form div {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 10px;
+}
+.content .products .element form div input[type="submit"] {
+  border: none;
+  outline: none;
+  background-color: var(--var-main-color);
+  width: 100px;
+  height: 30px;
+  border-radius: 5px;
+  font-weight: 500;
+  color: #fff;
+  cursor: pointer;
+  margin-top: 5px;
+  transition: all 0.4s;
+}
+.content .products .element form div input[type="submit"]:hover {
+  box-shadow: 2px 2px 8px 0 #00000050;
+}
+.voucher {
+  border-radius: 5px;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  margin-top: 20px;
+}
+.voucher > div {
+  background-color: #1f2122;
+  color: #fff;
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 100%;
+}
+.voucher > div h1 {
+  padding: 15px 0 15px 20px;
+  position: relative;
+}
+.voucher > div h1:after,
+.voucher > div > div::after {
+  position: absolute;
+  content: "";
+  width: 90%;
+  height: 1px;
+  background-color: var(--var-main-color);
+  left: 50%;
+  bottom: -5px;
+  transform: translateX(-50%);
+}
+.voucher > div > div {
+  padding: 5px 15px 5px 15px;
+  position: relative;
+}
+.voucher > div > div > div {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 10px 0;
+  font-weight: 500;
+}
+.voucher > div > div > div p {
+  text-transform: uppercase;
+}
+.voucher > div > div > div span {
+  color: var(--var-main-color);
+  font-weight: inherit;
+}
+.voucher > div > form {
+  margin: 30px 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: column;
+}
+.voucher > div > form input:first-child,
+.voucher > div > form input {
+  border: none;
+  color: #fff;
+  font-size: 1.2rem;
+  font-weight: 500;
+  background-color: #f6520c;
+  width: 80%;
+  height: 60px;
+  margin-bottom: 40px;
+  cursor: pointer;
+}
+.voucher > div > form span {
+  font-size: 1.5rem;
+  font-style: italic;
+  position: relative;
+  color: var(--var-main-color);
+  font-weight: 500;
+}
+.voucher > div > form span::before {
+  content: "";
+  position: absolute;
+  height: 2px;
+  width: 600%;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #fff;
+}
+.voucher > div > form span::after {
+  content: "OR";
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 1.5rem;
+  font-style: italic;
+  color: var(--var-main-color);
+  background-color: #1f2122;
+  padding: 10px;
+}
+.voucher > div > form input:last-child {
+  margin-bottom: 0;
+  margin-top: 40px;
+  background-color: #ced2d5;
+  cursor: unset;
+}

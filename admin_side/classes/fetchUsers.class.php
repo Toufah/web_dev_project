@@ -24,6 +24,7 @@ class FetchUsers extends Dbh
         $stmt->execute(array($user_id));
 
         $this->users = $stmt->fetchAll(pdo::FETCH_ASSOC);
+        $stmt = null;
     }
 
     private function fetchNumberOfAdmins(){
@@ -31,6 +32,7 @@ class FetchUsers extends Dbh
         $stmt->execute();
 
         $this->adminsNumber = count($stmt->fetchAll(pdo::FETCH_ASSOC));
+        $stmt = null;
     }
 
     private function fetchUserRole($user_id){
@@ -39,6 +41,7 @@ class FetchUsers extends Dbh
 
         $this->userRole = $stmt->fetchAll(pdo::FETCH_ASSOC);
         $this->userRole = $this->userRole[0]['role_as'];
+        $stmt = null;
     }
 
     public function getUsers()

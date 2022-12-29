@@ -1,3 +1,7 @@
+<?php
+include('../includes/fetchUsers.inc.php');
+if(isset($_SESSION['auth'])){
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -38,8 +42,6 @@
         <i class="fa-solid fa-arrow-right" id="arrow"></i>
         <!-- navbar -->
         <?php include('navbar.php') ?>
-        <!-- fetchUsers.inc.php -->
-        <?php include('../includes/fetchUsers.inc.php'); ?>
         <!-- start adminUsers body -->
         <section id="admin_cont">
             <div class="admin_cont">
@@ -163,3 +165,6 @@
 </body>
 
 </html>
+<?php
+}
+?>

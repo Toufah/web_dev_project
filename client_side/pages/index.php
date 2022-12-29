@@ -1,3 +1,7 @@
+<?php
+require_once('../includes/visitors.inc.php');
+require_once('../includes/fetchProducts.inc.php');
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -5,6 +9,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- favicon -->
+    <?php require_once('../includes/favicon.inc.php'); ?>
     <!-- home.css -->
     <link rel="stylesheet" href="../style/home.css">
     <!-- framework.css -->
@@ -26,7 +32,7 @@
 
 <body>
     <!-- including header -->
-    <?php include('header.php');?>
+    <?php require_once('header.php'); ?>
     <!-- start body -->
     <!-- start section one : welcoming -->
     <section id="welcoming">
@@ -49,7 +55,7 @@
     <!-- start section two : features-->
     <section id="features">
         <div class="container">
-            <div class="content flex_sp_bet">
+            <div class="content">
                 <div class="comp">
                     <img src="../pictures/FreeShipping2 [Converted]-01.svg">
                     <p>free shipping</p>
@@ -80,134 +86,35 @@
             <div class="content">
                 <h1>featured products</h1>
                 <div class="items_cont flex_sp_ev">
-                    <div class="item" id="et">
-                        <img src="../pictures/1c48fad2f383d784b92488c7969e503c.jpg">
-                        <div class="des">
-                            <span>shirrbook</span>
-                            <h4>shirrbook custom notebook</h4>
-                            <div class="star">
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>
+
+                    <?php
+                    if (count($products) <= 8) {
+                        $end = count($products);
+                    } else {
+                        $end = 8;
+                    }
+                    for ($i = 0; $i < $end; $i++) {
+                    ?>
+                        <div class="item" id="et">
+                            <img src="../../admin_side/pictures/<?php echo $products[$i]['product_image']; ?>">
+                            <div class="des">
+                                <span>shirrbook</span>
+                                <h4><?php echo $products[$i]['product_name']; ?></h4>
+                                <div class="star">
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                </div>
+                                <h3><span class="col_gold">$</span><?php echo $products[$i]['product_price']; ?></h3>
                             </div>
-                            <h3><span class="col_gold">$</span>22</h3>
+                            <form action="../includes/myCart.inc.php?product_id=<?php echo $products[$i]['product_id']; ?>" method="POST">
+                                <button type="submit" name="addToCart" style="cursor: pointer;"><i class="fa-solid fa-cart-shopping col_gold ft_si_20"></i></button>
+                            </form>
                         </div>
-                        <a href="#"><i class="fa-solid fa-cart-shopping col_gold ft_si_20"></i></a>
-                    </div>
-                    <div class="item">
-                        <img src="../pictures/1c48fad2f383d784b92488c7969e503c.jpg">
-                        <div class="des">
-                            <span>shirrbook</span>
-                            <h4>shirrbook custom notebook</h4>
-                            <div class="star">
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>
-                            </div>
-                            <h3><span class="col_gold">$</span>22</h3>
-                        </div>
-                        <a href="#"><i class="fa-solid fa-cart-shopping col_gold ft_si_20"></i></a>
-                    </div>
-                    <div class="item">
-                        <img src="../pictures/1c48fad2f383d784b92488c7969e503c.jpg">
-                        <div class="des">
-                            <span>shirrbook</span>
-                            <h4>shirrbook custom notebook</h4>
-                            <div class="star">
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>
-                            </div>
-                            <h3><span class="col_gold">$</span>22</h3>
-                        </div>
-                        <a href="#"><i class="fa-solid fa-cart-shopping col_gold ft_si_20"></i></a>
-                    </div>
-                    <div class="item">
-                        <img src="../pictures/1c48fad2f383d784b92488c7969e503c.jpg">
-                        <div class="des">
-                            <span>shirrbook</span>
-                            <h4>shirrbook custom notebook</h4>
-                            <div class="star">
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>
-                            </div>
-                            <h3><span class="col_gold">$</span>22</h3>
-                        </div>
-                        <a href="#"><i class="fa-solid fa-cart-shopping col_gold ft_si_20"></i></a>
-                    </div>
-                    <div class="item">
-                        <img src="../pictures/1c48fad2f383d784b92488c7969e503c.jpg">
-                        <div class="des">
-                            <span>shirrbook</span>
-                            <h4>shirrbook custom notebook</h4>
-                            <div class="star">
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>
-                            </div>
-                            <h3><span class="col_gold">$</span>22</h3>
-                        </div>
-                        <a href="#"><i class="fa-solid fa-cart-shopping col_gold ft_si_20"></i></a>
-                    </div>
-                    <div class="item">
-                        <img src="../pictures/1c48fad2f383d784b92488c7969e503c.jpg">
-                        <div class="des">
-                            <span>shirrbook</span>
-                            <h4>shirrbook custom notebook</h4>
-                            <div class="star">
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>
-                            </div>
-                            <h3><span class="col_gold">$</span>22</h3>
-                        </div>
-                        <a href="#"><i class="fa-solid fa-cart-shopping col_gold ft_si_20"></i></a>
-                    </div>
-                    <div class="item">
-                        <img src="../pictures/1c48fad2f383d784b92488c7969e503c.jpg">
-                        <div class="des">
-                            <span>shirrbook</span>
-                            <h4>shirrbook custom notebook</h4>
-                            <div class="star">
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>
-                            </div>
-                            <h3><span class="col_gold">$</span>22</h3>
-                        </div>
-                        <a href="#"><i class="fa-solid fa-cart-shopping col_gold ft_si_20"></i></a>
-                    </div>
-                    <div class="item">
-                        <img src="../pictures/1c48fad2f383d784b92488c7969e503c.jpg">
-                        <div class="des">
-                            <span>shirrbook</span>
-                            <h4>shirrbook custom notebook</h4>
-                            <div class="star">
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>
-                            </div>
-                            <h3><span class="col_gold">$</span>22</h3>
-                        </div>
-                        <a href="#"><i class="fa-solid fa-cart-shopping col_gold ft_si_20"></i></a>
-                    </div>
+                    <?php }
+                    ?>
                 </div>
             </div>
         </div>
@@ -229,134 +136,34 @@
             <div class="content">
                 <h1>new arrival</h1>
                 <div class="items_cont flex_sp_ev">
-                    <div class="item" id="et">
-                        <img src="../pictures/1c48fad2f383d784b92488c7969e503c.jpg">
-                        <div class="des">
-                            <span>shirrbook</span>
-                            <h4>shirrbook custom notebook</h4>
-                            <div class="star">
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>
+                    <?php
+                    if (count($products) <= 8) {
+                        $end = count($products);
+                    } else {
+                        $end = 8;
+                    }
+                    for ($i = 0; $i < $end; $i++) {
+                    ?>
+                        <div class="item" id="et">
+                            <img src="../../admin_side/pictures/<?php echo $products[$i]['product_image']; ?>">
+                            <div class="des">
+                                <span>shirrbook</span>
+                                <h4><?php echo $products[$i]['product_name']; ?></h4>
+                                <div class="star">
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                </div>
+                                <h3><span class="col_gold">$</span><?php echo $products[$i]['product_price']; ?></h3>
                             </div>
-                            <h3><span class="col_gold">$</span>22</h3>
+                            <form action="../includes/myCart.inc.php?product_id=<?php echo $products[$i]['product_id']; ?>" method="POST">
+                                <button type="submit" name="addToCart" style="cursor: pointer;"><i class="fa-solid fa-cart-shopping col_gold ft_si_20"></i></button>
+                            </form>
                         </div>
-                        <a href="#"><i class="fa-solid fa-cart-shopping col_gold ft_si_20"></i></a>
-                    </div>
-                    <div class="item">
-                        <img src="../pictures/1c48fad2f383d784b92488c7969e503c.jpg">
-                        <div class="des">
-                            <span>shirrbook</span>
-                            <h4>shirrbook custom notebook</h4>
-                            <div class="star">
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>
-                            </div>
-                            <h3><span class="col_gold">$</span>22</h3>
-                        </div>
-                        <a href="#"><i class="fa-solid fa-cart-shopping col_gold ft_si_20"></i></a>
-                    </div>
-                    <div class="item">
-                        <img src="../pictures/1c48fad2f383d784b92488c7969e503c.jpg">
-                        <div class="des">
-                            <span>shirrbook</span>
-                            <h4>shirrbook custom notebook</h4>
-                            <div class="star">
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>
-                            </div>
-                            <h3><span class="col_gold">$</span>22</h3>
-                        </div>
-                        <a href="#"><i class="fa-solid fa-cart-shopping col_gold ft_si_20"></i></a>
-                    </div>
-                    <div class="item">
-                        <img src="../pictures/1c48fad2f383d784b92488c7969e503c.jpg">
-                        <div class="des">
-                            <span>shirrbook</span>
-                            <h4>shirrbook custom notebook</h4>
-                            <div class="star">
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>
-                            </div>
-                            <h3><span class="col_gold">$</span>22</h3>
-                        </div>
-                        <a href="#"><i class="fa-solid fa-cart-shopping col_gold ft_si_20"></i></a>
-                    </div>
-                    <div class="item">
-                        <img src="../pictures/1c48fad2f383d784b92488c7969e503c.jpg">
-                        <div class="des">
-                            <span>shirrbook</span>
-                            <h4>shirrbook custom notebook</h4>
-                            <div class="star">
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>
-                            </div>
-                            <h3><span class="col_gold">$</span>22</h3>
-                        </div>
-                        <a href="#"><i class="fa-solid fa-cart-shopping col_gold ft_si_20"></i></a>
-                    </div>
-                    <div class="item">
-                        <img src="../pictures/1c48fad2f383d784b92488c7969e503c.jpg">
-                        <div class="des">
-                            <span>shirrbook</span>
-                            <h4>shirrbook custom notebook</h4>
-                            <div class="star">
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>
-                            </div>
-                            <h3><span class="col_gold">$</span>22</h3>
-                        </div>
-                        <a href="#"><i class="fa-solid fa-cart-shopping col_gold ft_si_20"></i></a>
-                    </div>
-                    <div class="item">
-                        <img src="../pictures/1c48fad2f383d784b92488c7969e503c.jpg">
-                        <div class="des">
-                            <span>shirrbook</span>
-                            <h4>shirrbook custom notebook</h4>
-                            <div class="star">
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>
-                            </div>
-                            <h3><span class="col_gold">$</span>22</h3>
-                        </div>
-                        <a href="#"><i class="fa-solid fa-cart-shopping col_gold ft_si_20"></i></a>
-                    </div>
-                    <div class="item">
-                        <img src="../pictures/1c48fad2f383d784b92488c7969e503c.jpg">
-                        <div class="des">
-                            <span>shirrbook</span>
-                            <h4>shirrbook custom notebook</h4>
-                            <div class="star">
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>
-                            </div>
-                            <h3><span class="col_gold">$</span>22</h3>
-                        </div>
-                        <a href="#"><i class="fa-solid fa-cart-shopping col_gold ft_si_20"></i></a>
-                    </div>
+                    <?php }
+                    ?>
                 </div>
             </div>
         </div>
@@ -369,17 +176,17 @@
                 <h4>sign up for newsletters</h4>
                 <p>get e_mail updates about latest collections and <span class="col_gold">special offers.</span></p>
             </div>
-            <form action="">
-                <input type="text" placeholder="email adress">
-                <button type="submit">sign up</button>
+            <form action="../includes/e_mails.inc.php" method="POST">
+                <input type="mail" placeholder="email adress" name="e_mail">
+                <button type="submit" name="submit_e_mail">sign up</button>
             </form>
         </div>
     </div>
     <!-- end section six : newsletter -->
     <!-- including footer -->
-    <?php include('footer.php')?>
+    <?php require_once('footer.php') ?>
     <!-- end body -->
-    <script src="../javascript/index.js"></script>
+    <script src="../scripts/index.js"></script>
 </body>
 
 </html>

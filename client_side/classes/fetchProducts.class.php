@@ -1,5 +1,6 @@
 <?php
-class FetchProducts extends Dbh
+require_once('../classes/dbhc.class.php');
+class FetchProducts extends Dbhc
 {
     private $products;
     private $product;

@@ -124,3 +124,8 @@ footer{
     font-size: 18px;
 }
 /* end footer */
+@media (max-width: 830px){
+    .form{
+        width: 95%;
+    }
+}

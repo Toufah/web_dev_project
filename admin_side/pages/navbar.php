@@ -7,6 +7,8 @@
                 echo 'admin users';
             }elseif(basename($_SERVER['PHP_SELF']) == 'products.php'){
                 echo 'products';
+            }elseif(basename($_SERVER['PHP_SELF']) == 'orders.php'){
+                echo 'orders';
             }
         ?>
     </h1>

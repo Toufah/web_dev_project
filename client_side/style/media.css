@@ -5,6 +5,19 @@
     }
 }
 
+/* medium screens */
+@media (max-width : 1280px){
+    #features .content{
+        gap: 5px;
+    }
+}
+
+@media (max-width : 1150px){
+    #features .content{
+        display: none;
+    }
+}
+
 /* start < 950px media */
 @media (max-width: 950px){
     /* start header */
@@ -105,10 +118,20 @@
     .items_cont{
         display: block !important;
     }
+    .container{
+        padding: 0 15px;
+    }
+    #featured_prod .container .content h1{
+        text-align: center;
+        font-size: 30px;
+    }
     #featured_prod .item{
         width: 300px;
         margin-left: auto;
         margin-right: auto;
+    }
+    #call{
+        height: 250px;
     }
 }
 /* end < 800px media */

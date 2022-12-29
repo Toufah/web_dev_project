@@ -19,8 +19,12 @@
     #recent_ord .content .table{
         overflow: scroll;
     }
-    #recent_ord .content .table::-webkit-scrollbar{
+    #recent_ord .content .table::-webkit-scrollbar,
+    #products .container::-webkit-scrollbar{
         display: none;
+    }
+    #products .container{
+        overflow: scroll;
     }
 }
 @media (max-width: 560px){

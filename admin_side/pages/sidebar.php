@@ -7,28 +7,28 @@
                 <span>dashboard</span>
             </li>
         </a>
-        <a href="#" class="a_norm">
+        <a href="adminUsers.php" class="a_norm">
+            <li class="li_norm">
+                <i class="fa-solid fa-users"></i>
+                <span>admin users</span>
+            </li>
+        </a>
+        <!-- <a href="#" class="a_norm">
             <li class="li_norm">
                 <i class="fa-solid fa-user"></i>
                 <span>user profile</span>
             </li>
-        </a>
+        </a> -->
         <a href="products.php" class="a_norm">
             <li class="li_norm">
                 <i class="fa-solid fa-cart-shopping"></i>
                 <span>products</span>
             </li>
         </a>
-        <a href="#" class="a_norm">
+        <a href="orders.php" class="a_norm">
             <li class="li_norm">
                 <i class="fa-solid fa-money-bill"></i>
                 <span>orders</span>
-            </li>
-        </a>
-        <a href="adminUsers.php" class="a_norm">
-            <li class="li_norm">
-                <i class="fa-solid fa-users"></i>
-                <span>admin users</span>
             </li>
         </a>
         <a href="../includes/logout.inc.php" class="a_norm">

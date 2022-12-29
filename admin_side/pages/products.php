@@ -1,5 +1,8 @@
 <!-- including fetchProducts -->
-<?php include('../includes/fetchProducts.inc.php'); ?>
+<?php 
+include('../includes/fetchProducts.inc.php'); 
+if(isset($_SESSION['auth'])){
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -130,3 +133,6 @@
 </body>
 
 </html>
+<?php
+}
+?>

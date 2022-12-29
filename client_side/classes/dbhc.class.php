@@ -1,6 +1,6 @@
 <?php
 
-class Dbh
+class Dbhc
 {
     public function connect()
     {

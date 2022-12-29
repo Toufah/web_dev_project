@@ -1,0 +1,1 @@
+<link rel="icon" href="../pictures/palm.ico" type="image/ico">
