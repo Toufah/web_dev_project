@@ -72,10 +72,9 @@
         <div class="fit_cont centerX">
             <ul class="li_norm" style="color: #fff;">
                 <li class="inl_bl bor_remo centerY_li ft_w_500 mar_side_10"><a href="index.php" class="a_norm">home</a></li>
-                <li class="inl_bl bor_remo centerY_li ft_w_500 mar_side_10"><a href="#" class="a_norm">packages</a></li>
-                <li class="inl_bl bor_remo centerY_li ft_w_500 mar_side_10"><a href="#" class="a_norm">new arrivals</a></li>
                 <li class="inl_bl bor_remo centerY_li ft_w_500 mar_side_10"><a href="best_seller.php" class="a_norm">best seller</a></li>
-                <li class="inl_bl bor_remo centerY_li ft_w_500 mar_side_10"><a href="#" class="a_norm">contact</a></li>
+                <li class="inl_bl bor_remo centerY_li ft_w_500 mar_side_10"><a href="newArrivals.php" class="a_norm">new arrivals</a></li>
+                <li class="inl_bl bor_remo centerY_li ft_w_500 mar_side_10"><a href="contact.php" class="a_norm">contact</a></li>
             </ul>
         </div>
     </div>
@@ -88,10 +87,9 @@
         <div class="fit_cont centerX list" id="navbar">
             <ul class="li_norm" style="color: #fff;">
                 <li class="centerY_li ft_w_500 mar_side_10"><a href="index.php" class="a_norm">home</a></li>
-                <li class="centerY_li ft_w_500 mar_side_10"><a href="#" class="a_norm">packages</a></li>
-                <li class="centerY_li ft_w_500 mar_side_10"><a href="#" class="a_norm">new arrivals</a></li>
                 <li class="centerY_li ft_w_500 mar_side_10"><a href="best_seller.php" class="a_norm">best seller</a></li>
-                <li class="centerY_li ft_w_500 mar_side_10"><a href="#" class="a_norm">contact</a></li>
+                <li class="centerY_li ft_w_500 mar_side_10"><a href="newArrivals.php" class="a_norm">new arrivals</a></li>
+                <li class="centerY_li ft_w_500 mar_side_10"><a href="contact.php" class="a_norm">contact</a></li>
                 <i class="fa-solid fa-xmark" id="close"></i>
             </ul>
         </div>

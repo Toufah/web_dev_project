@@ -38,7 +38,7 @@ include('../includes/fetchProducts.inc.php');
         <div class="containr">
             <div class="content">
                 <div class="items_cont flex_sp_ev">
-                    <h1>best seller</h1>
+                    <h1>new arrivals</h1>
                     <div class="items_cont flex_sp_ev">
 
                         <?php

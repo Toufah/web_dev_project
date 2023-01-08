@@ -1,0 +1,160 @@
+/* font family : Sono 300 400 500 600 700 */
+@import url("https://fonts.googleapis.com/css2?family=sonowght@300;400;500;600;700&display=swap");
+/* start global style */
+:root {
+  --var-gray: #ececec;
+  --var-gray-2: #ccc;
+  --var-main-color: #daa520;
+}
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Sono", sans-serif;
+  text-transform: capitalize;
+  scroll-behavior: smooth;
+}
+.container {
+  margin: 0 auto;
+  padding: 0 60px;
+}
+/* end global style */
+.container .content {
+  padding: 20px 15px;
+  max-width: 500px;
+  margin: 30px auto;
+  border-radius: 20px;
+  outline: solid 1px var(--var-main-color);
+}
+.content h1 {
+  margin: 0 0 30px;
+  text-align: center;
+}
+.content form .userbox {
+  position: relative;
+}
+.content form .userbox input {
+  width: 100%;
+  padding: 10px 0;
+  font-size: 16px;
+  color: #000;
+  margin-bottom: 30px;
+  border: none;
+  border-bottom: 1px solid #000;
+  outline: none;
+  background: transparent;
+}
+.content form label {
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: 10px 0;
+  font-size: 16px;
+  color: var(--var-gray-2);
+  font-weight: 500;
+  pointer-events: none;
+  transition: 0.5s;
+}
+.content form .userbox input:focus ~ label,
+.content form .userbox input:valid ~ label {
+  top: -20px;
+  left: 0;
+  color: var(--var-main-color);
+  font-size: 12px;
+}
+.content form button{
+  position: relative;
+  display: inline-block;
+  padding: 12px 21px;
+  color: var(--var-main-color);
+  font-size: 16px;
+  text-transform: uppercase;
+  overflow: hidden;
+  transition: 0.5s;
+  margin-top: 42px;
+  letter-spacing: 4px;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
+.content form button:hover {
+  background: var(--var-main-color);
+  color: #fff;
+  border-radius: 5px;
+  box-shadow: 0 0 5px var(--var-main-color), 0 0 25px var(--var-main-color), 0 0 50px var(--var-main-color),
+    0 0 100px var(--var-main-color);
+}
+.content form button span {
+  position: absolute;
+  display: block;
+}
+.content form button span:nth-child(1) {
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, var(--var-main-color));
+  animation: btn-anim1 1s linear infinite;
+}
+@keyframes btn-anim1 {
+  0% {
+    left: -100%;
+  }
+  50%,
+  100% {
+    left: 100%;
+  }
+}
+.content form button span:nth-child(2) {
+  top: -100%;
+  right: 0;
+  width: 2px;
+  height: 100%;
+  background: linear-gradient(180deg, transparent, var(--var-main-color));
+  animation: btn-anim2 1s linear infinite;
+  animation-delay: 0.25s;
+}
+@keyframes btn-anim2 {
+  0% {
+    top: -100%;
+  }
+  50%,
+  100% {
+    top: 100%;
+  }
+}
+.content form button span:nth-child(3) {
+  bottom: 0;
+  right: -100%;
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(270deg, transparent, var(--var-main-color));
+  animation: btn-anim3 1s linear infinite;
+  animation-delay: 0.5s;
+}
+@keyframes btn-anim3 {
+    0% {
+      right: -100%;
+    }
+    50%,100% {
+      right: 100%;
+    }
+  }
+  .content form button span:nth-child(4) {
+    bottom: -100%;
+    left: 0;
+    width: 2px;
+    height: 100%;
+    background: linear-gradient(360deg, transparent, var(--var-main-color));
+    animation: btn-anim4 1s linear infinite;
+    animation-delay: .75s
+  }
+  
+  @keyframes btn-anim4 {
+    0% {
+      bottom: -100%;
+    }
+    50%,100% {
+      bottom: 100%;
+    }
+  }
